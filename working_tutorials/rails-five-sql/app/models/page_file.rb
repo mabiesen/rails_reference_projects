@@ -1,0 +1,2 @@
+class PageFile < ApplicationRecord
+end

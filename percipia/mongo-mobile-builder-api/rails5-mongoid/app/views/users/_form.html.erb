@@ -1,0 +1,72 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :companyName %>
+    <%= form.text_field :companyName, id: :user_companyName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :companyLocation %>
+    <%= form.text_field :companyLocation, id: :user_companyLocation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :companyPassword %>
+    <%= form.password_field :companyPassword, id: :user_companyPassword %>
+  </div>
+
+  <div class="field">
+    <%= form.label :companyFreqIP %>
+    <%= form.text_field :companyFreqIP, id: :user_companyFreqIP %>
+  </div>
+
+  <div class="field">
+    <%= form.label :companyFreqKey %>
+    <%= form.text_field :companyFreqKey, id: :user_companyFreqKey %>
+  </div>
+
+  <div class="field">
+    <%= form.label :companyParallaxIP %>
+    <%= form.text_field :companyParallaxIP, id: :user_companyParallaxIP %>
+  </div>
+
+  <div class="field">
+    <%= form.label :companyParallaxKey %>
+    <%= form.text_field :companyParallaxKey, id: :user_companyParallaxKey %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jsonKey %>
+    <%= form.text_field :jsonKey, id: :user_jsonKey %>
+  </div>
+
+  <div class="field">
+    <%= form.label :woeID %>
+    <%= form.text_field :woeID, id: :user_woeID %>
+  </div>
+
+  <div class="field">
+    <%= form.label :domain %>
+    <%= form.text_field :domain, id: :user_domain %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :user_title %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module GetlinksHelper
+end

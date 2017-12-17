@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @page_file.type %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @page_file.name %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @page_file.link %>
+</p>
+
+<%= link_to 'Edit', edit_page_file_path(@page_file) %> |
+<%= link_to 'Back', page_files_path %>
